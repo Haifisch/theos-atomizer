@@ -1,0 +1,16 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  '.overlayer':
+      'Enable theos-atomizer': 'theos-atomizer:toggle'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'theos-atomizer'
+      'submenu': [
+        { 'label': 'Toggle', 'command': 'theos-atomizer:toggle' }
+      ]
+    ]
+  }
+]

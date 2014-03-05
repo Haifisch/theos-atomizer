@@ -1,0 +1,15 @@
+{
+  "name": "theos-atomizer",
+  "main": "./lib/theos-atomizer",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A short description of your package",
+  "activationEvents": ["theos-atomizer:build"],
+  "repository": "https://github.com/atom/theos-atomizer",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+  }
+}
