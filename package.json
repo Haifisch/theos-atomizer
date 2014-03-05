@@ -1,11 +1,11 @@
 {
   "name": "theos-atomizer",
   "main": "./lib/theos-atomizer",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
-  "description": "A short description of your package",
+  "description": "Build theos (or any makefile project, really) project from Atom",
   "activationEvents": ["theos-atomizer:build"],
-  "repository": "https://github.com/atom/theos-atomizer",
+  "repository": "https://github.com/Haifisch/theos-atomizer",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
