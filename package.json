@@ -1,7 +1,7 @@
 {
   "name": "theos-atomizer",
   "main": "./lib/theos-atomizer",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "description": "Build theos (or any makefile project, really) project from Atom",
   "activationEvents": [
