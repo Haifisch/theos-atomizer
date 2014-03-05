@@ -1,4 +1,5 @@
-# theos-atomizer package
+# Theos Atomizer
 
 Build tweaks with theos, through Atom.
-Completely beta, plus I'm leaning CoffeeScript so I'd say it's pre-alpha.
+Probably all good to use. All it does is set some bash variables and runs 'make package install'
+Consoles are soooooooo 2013.
