@@ -1,4 +1,5 @@
 {$,BufferedProcess,View,EditorView} = require 'atom'
+require 'shelljs/global'
 
 module.exports =
 class TheosAtomizerView extends View
@@ -11,7 +12,7 @@ class TheosAtomizerView extends View
   initialize: (serializeState) ->
     atom.workspaceView.command "theos-atomizer:build", => @attach()
     @miniEditor.hiddenInput.on 'focusout', => @detach()
-    @on 'core:confirm', => @confirm()
+    @on 'core:confirm', => @build()
     @on 'core:cancel', => @detach()
   # Returns an object that can be retrieved when package is activated
   serialize: ->
@@ -27,8 +28,10 @@ class TheosAtomizerView extends View
     @detach()
 
   build: (callback) ->
-    console.log 'Running make'
-    @runCommand('make', ['package','install'], callback)
-
-  runCommand: (command, args, exit) ->
-      new BufferedProcess({command, args, exit})
+    deviceIP = @miniEditor.getText()
+    console.log "Device IP: #{deviceIP}"
+    console.log atom.project.getPath()
+    cd(atom.project.getPath())
+    exec "make package install", (code, output) ->
+        console.log "Exit code:", code
+        console.log "Program output:", output
