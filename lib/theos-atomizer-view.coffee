@@ -32,9 +32,6 @@ class TheosAtomizerView extends View
     console.log "Device IP: #{deviceIP}"
     console.log atom.project.getPath()
     cd(atom.project.getPath())
-    exec "export THEOS_DEVICE_IP=#{deviceIP}", (code, output) ->
-        console.log "Exit code:", code
-        console.log "Program output:", output
-    exec "make clean && make package install", (code, output) ->
+    exec "export THEOS_DEVICE_IP=#{deviceIP} && export PATH=$PATH:/usr/local/bin && make clean && make package install", (code, output) ->
         console.log "Exit code:", code
         console.log "Program output:", output
