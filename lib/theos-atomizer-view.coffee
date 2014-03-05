@@ -35,6 +35,6 @@ class TheosAtomizerView extends View
     exec "export THEOS_DEVICE_IP=#{deviceIP}", (code, output) ->
         console.log "Exit code:", code
         console.log "Program output:", output
-    exec "make package install", (code, output) ->
+    exec "make clean && make package install", (code, output) ->
         console.log "Exit code:", code
         console.log "Program output:", output
